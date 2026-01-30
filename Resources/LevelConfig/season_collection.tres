@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SeasonCollection" load_steps=8 format=3 uid="uid://5ecwb7qt6bgm"]
+
+[ext_resource type="Script" uid="uid://djbdcns22ulu6" path="res://Script/GamePlay/LevelConfig/season_collection.gd" id="1_ekvwq"]
+[ext_resource type="Script" uid="uid://c0i580jgknwka" path="res://Script/GamePlay/LevelConfig/season_config.gd" id="2_gh01b"]
+[ext_resource type="Resource" uid="uid://yj3gvy71p3v8" path="res://Resources/LevelConfig/test_season_01.tres" id="3_inr8k"]
+[ext_resource type="Resource" uid="uid://dxlqq5ywijkve" path="res://Resources/LevelConfig/test_season_02.tres" id="4_cdu1e"]
+[ext_resource type="Resource" uid="uid://bgeemxfeqoplp" path="res://Resources/LevelConfig/test_season_03.tres" id="5_j5kdu"]
+[ext_resource type="Resource" uid="uid://cg7w7f0xli4ex" path="res://Resources/LevelConfig/test_season_04.tres" id="6_kxqu0"]
+[ext_resource type="Resource" uid="uid://cy682d10lqdqe" path="res://Resources/LevelConfig/test_season_05.tres" id="7_e6iut"]
+
+[resource]
+script = ExtResource("1_ekvwq")
+seasons = Array[ExtResource("2_gh01b")]([ExtResource("3_inr8k"), ExtResource("4_cdu1e"), ExtResource("5_j5kdu"), ExtResource("6_kxqu0"), ExtResource("7_e6iut")])
+metadata/_custom_type_script = "uid://djbdcns22ulu6"

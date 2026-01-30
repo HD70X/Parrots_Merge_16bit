@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ParrotObjective" load_steps=3 format=3 uid="uid://khk50kgmfmb2"]
+
+[ext_resource type="Script" uid="uid://bki5ccs45v4ob" path="res://Script/GamePlay/LevelConfig/objective_parrot.gd" id="1_kparw"]
+[ext_resource type="Resource" uid="uid://cd053u8cvgooo" path="res://Resources/Parrots/parrot_a_07.tres" id="2_eea85"]
+
+[resource]
+script = ExtResource("1_kparw")
+target_parrot = ExtResource("2_eea85")
+description = "Create the largest parrot."
+metadata/_custom_type_script = "uid://bki5ccs45v4ob"

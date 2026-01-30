@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemStackable" load_steps=2 format=3 uid="uid://bblw0rxdmx1ob"]
+
+[ext_resource type="Script" uid="uid://da4m8ge8lkqy8" path="res://Script/GameData/Item/item_stackable.gd" id="1_s3ykj"]
+
+[resource]
+script = ExtResource("1_s3ykj")
+max_stack = 999
+item_id = "Star_00"
+item_name = "Star"
+item_description = "The star to unlock seasons. You can collect stars by complete level and its second task."
+unlock_exp = 0
+unlock_credits = 0
+metadata/_custom_type_script = "uid://da4m8ge8lkqy8"

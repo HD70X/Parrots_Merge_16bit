@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjqjpkybktise"]
+
+[ext_resource type="Texture2D" uid="uid://22wdu78oqhp0" path="res://Art/Sprite/UI/ui_sprite_sheet.png" id="1_j83po"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1mon"]
+atlas = ExtResource("1_j83po")
+region = Rect2(0, 744, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j83po"]
+atlas = ExtResource("1_j83po")
+region = Rect2(0, 588, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7udc"]
+atlas = ExtResource("1_j83po")
+region = Rect2(0, 900, 144, 150)
+
+[node name="PlayButton" type="TextureButton"]
+offset_right = 19.0
+offset_bottom = 19.0
+texture_normal = SubResource("AtlasTexture_s1mon")
+texture_pressed = SubResource("AtlasTexture_j83po")
+texture_hover = SubResource("AtlasTexture_s1mon")
+texture_disabled = SubResource("AtlasTexture_r7udc")

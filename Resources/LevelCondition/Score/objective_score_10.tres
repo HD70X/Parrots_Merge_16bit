@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ScoreObjective" load_steps=2 format=3 uid="uid://dtm28m12af6ru"]
+
+[ext_resource type="Script" uid="uid://c1txsukuounxt" path="res://Script/GamePlay/LevelConfig/objective_score.gd" id="1_3m1iw"]
+
+[resource]
+script = ExtResource("1_3m1iw")
+target_score = 10
+description = "Get 10 scores in a game."
+metadata/_custom_type_script = "uid://c1txsukuounxt"

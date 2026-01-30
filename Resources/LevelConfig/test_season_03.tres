@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SeasonConfig" load_steps=5 format=3 uid="uid://bgeemxfeqoplp"]
+
+[ext_resource type="Script" uid="uid://jg4yqnjnyl7a" path="res://Script/GamePlay/LevelConfig/level_config.gd" id="1_uwuj2"]
+[ext_resource type="Resource" uid="uid://bnr4pcmflxsla" path="res://Resources/LevelConfig/test_level_S03_L01.tres" id="2_agtwc"]
+[ext_resource type="Script" uid="uid://c0i580jgknwka" path="res://Script/GamePlay/LevelConfig/season_config.gd" id="4_238nh"]
+[ext_resource type="Texture2D" uid="uid://bwksgrshm0h08" path="res://Art/Sprite/Parrots/NormalParrots.png" id="5_r4sm1"]
+
+[resource]
+script = ExtResource("4_238nh")
+season_id = "TEST_S3"
+season_name = "Season III"
+season_button_texture = ExtResource("5_r4sm1")
+unlock_stars_required = 6
+total_stars = 6
+levels = Array[ExtResource("1_uwuj2")]([ExtResource("2_agtwc")])
+metadata/_custom_type_script = "uid://c0i580jgknwka"

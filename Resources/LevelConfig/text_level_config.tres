@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="LevelConfig" load_steps=16 format=3 uid="uid://dtulng28cogrc"]
+
+[ext_resource type="Script" uid="uid://btarij3lja7ue" path="res://Script/GamePlay/MainGame/throwable_data.gd" id="1_wuxli"]
+[ext_resource type="Resource" uid="uid://qigmcmxjl726" path="res://Resources/Parrots/egg_a.tres" id="2_4sj4x"]
+[ext_resource type="Script" uid="uid://jg4yqnjnyl7a" path="res://Script/GamePlay/LevelConfig/level_config.gd" id="3_afh0q"]
+[ext_resource type="Resource" uid="uid://ct4xmeaniv0uw" path="res://Resources/Parrots/egg_b.tres" id="3_r28nk"]
+[ext_resource type="Resource" uid="uid://cs7yq3sm2fa5c" path="res://Resources/Parrots/parrot_a_01.tres" id="4_k7pbv"]
+[ext_resource type="Resource" uid="uid://burnm8cwcbtyl" path="res://Resources/Parrots/parrot_a_02.tres" id="5_us3ns"]
+[ext_resource type="Resource" uid="uid://c4y3u5qopgade" path="res://Resources/Parrots/parrot_a_03.tres" id="6_cdvfc"]
+[ext_resource type="Resource" uid="uid://cyqu6rcvavsxj" path="res://Resources/Parrots/parrot_a_04.tres" id="7_us3ns"]
+[ext_resource type="Resource" uid="uid://nbcf7uesqsm3" path="res://Resources/Parrots/parrot_a_05.tres" id="8_cdvfc"]
+[ext_resource type="Resource" uid="uid://bhqdq5l14tuvr" path="res://Resources/Parrots/parrot_a_06.tres" id="9_qgm3h"]
+[ext_resource type="Resource" uid="uid://cd053u8cvgooo" path="res://Resources/Parrots/parrot_a_07.tres" id="10_1veys"]
+[ext_resource type="Script" uid="uid://bgkrvhcwbd5f6" path="res://Script/GamePlay/LevelConfig/level_objective.gd" id="12_cdvfc"]
+[ext_resource type="Resource" uid="uid://d0d0jp4vr5xes" path="res://Resources/LevelCondition/Score/objective_score_100.tres" id="12_shpa1"]
+[ext_resource type="Resource" uid="uid://bethuxnl8fv13" path="res://Resources/LevelCondition/Score/objective_score_50.tres" id="15_27c4f"]
+[ext_resource type="Resource" uid="uid://khk50kgmfmb2" path="res://Resources/LevelCondition/CreateSpecificParrot/objective_parrot_green_07.tres" id="16_620d4"]
+
+[resource]
+script = ExtResource("3_afh0q")
+drop_weights = Dictionary[ExtResource("1_wuxli"), int]({
+ExtResource("2_4sj4x"): 0,
+ExtResource("3_r28nk"): 0,
+ExtResource("4_k7pbv"): 0,
+ExtResource("5_us3ns"): 0,
+ExtResource("6_cdvfc"): 0,
+ExtResource("9_qgm3h"): 10
+})
+pool_overrides = Dictionary[ExtResource("1_wuxli"), int]({
+ExtResource("2_4sj4x"): 15,
+ExtResource("3_r28nk"): 15,
+ExtResource("4_k7pbv"): 15,
+ExtResource("5_us3ns"): 15,
+ExtResource("6_cdvfc"): 15,
+ExtResource("7_us3ns"): 15,
+ExtResource("8_cdvfc"): 15,
+ExtResource("9_qgm3h"): 15,
+ExtResource("10_1veys"): 15
+})
+primary_objectives = ExtResource("12_shpa1")
+secondary_objectives = Array[ExtResource("12_cdvfc")]([ExtResource("15_27c4f"), ExtResource("16_620d4")])
+metadata/_custom_type_script = "uid://jg4yqnjnyl7a"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SeasonConfig" load_steps=9 format=3 uid="uid://yj3gvy71p3v8"]
+
+[ext_resource type="Script" uid="uid://jg4yqnjnyl7a" path="res://Script/GamePlay/LevelConfig/level_config.gd" id="1_vo1ru"]
+[ext_resource type="Script" uid="uid://c0i580jgknwka" path="res://Script/GamePlay/LevelConfig/season_config.gd" id="2_12t3j"]
+[ext_resource type="Resource" uid="uid://ccgw7rysqlbr7" path="res://Resources/LevelConfig/test_level_S01_L01.tres" id="2_d3cdn"]
+[ext_resource type="Resource" uid="uid://tqxn82acb7i" path="res://Resources/LevelConfig/test_level_S01_L02.tres" id="3_i5dcf"]
+[ext_resource type="Resource" uid="uid://bekfoaur535cn" path="res://Resources/LevelConfig/test_level_S01_L03.tres" id="4_v5wtj"]
+[ext_resource type="Resource" uid="uid://c1vhy2k0gsp00" path="res://Resources/LevelConfig/test_level_S01_L04.tres" id="5_ex6uw"]
+[ext_resource type="Resource" uid="uid://cjgshm5v8gqec" path="res://Resources/LevelConfig/test_level_S01_L05.tres" id="6_1th2t"]
+[ext_resource type="Texture2D" uid="uid://cs1g2koqj23h4" path="res://Art/Sprite/Parrots/egg-b.png" id="8_bg7tk"]
+
+[resource]
+script = ExtResource("2_12t3j")
+season_id = "TEST_S1"
+season_name = "Season I"
+season_button_texture = ExtResource("8_bg7tk")
+total_stars = 15
+levels = Array[ExtResource("1_vo1ru")]([ExtResource("2_d3cdn"), ExtResource("3_i5dcf"), ExtResource("4_v5wtj"), ExtResource("5_ex6uw"), ExtResource("6_1th2t")])
+metadata/_custom_type_script = "uid://c0i580jgknwka"

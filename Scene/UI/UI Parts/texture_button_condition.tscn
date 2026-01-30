@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://u4e2vixj6tf6"]
+
+[ext_resource type="Texture2D" uid="uid://22wdu78oqhp0" path="res://Art/Sprite/UI/ui_sprite_sheet.png" id="1_p08a8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p08a8"]
+atlas = ExtResource("1_p08a8")
+region = Rect2(300, 156, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h72o4"]
+atlas = ExtResource("1_p08a8")
+region = Rect2(300, 0, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovhiw"]
+atlas = ExtResource("1_p08a8")
+region = Rect2(300, 312, 144, 150)
+
+[node name="ConditionButton" type="TextureButton"]
+offset_right = 19.0
+offset_bottom = 19.0
+texture_normal = SubResource("AtlasTexture_p08a8")
+texture_pressed = SubResource("AtlasTexture_h72o4")
+texture_hover = SubResource("AtlasTexture_p08a8")
+texture_disabled = SubResource("AtlasTexture_ovhiw")

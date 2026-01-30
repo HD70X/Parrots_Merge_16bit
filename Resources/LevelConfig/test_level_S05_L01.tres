@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="LevelConfig" load_steps=17 format=3 uid="uid://dfrlinbfa6r4v"]
+
+[ext_resource type="Script" uid="uid://btarij3lja7ue" path="res://Script/GamePlay/MainGame/throwable_data.gd" id="1_blrcv"]
+[ext_resource type="Resource" uid="uid://qigmcmxjl726" path="res://Resources/Parrots/egg_a.tres" id="2_8px46"]
+[ext_resource type="Resource" uid="uid://ct4xmeaniv0uw" path="res://Resources/Parrots/egg_b.tres" id="3_0n8y2"]
+[ext_resource type="Resource" uid="uid://cs7yq3sm2fa5c" path="res://Resources/Parrots/parrot_a_01.tres" id="4_mhf10"]
+[ext_resource type="Resource" uid="uid://burnm8cwcbtyl" path="res://Resources/Parrots/parrot_a_02.tres" id="5_ki4rd"]
+[ext_resource type="Resource" uid="uid://c4y3u5qopgade" path="res://Resources/Parrots/parrot_a_03.tres" id="6_oym7l"]
+[ext_resource type="Resource" uid="uid://bhqdq5l14tuvr" path="res://Resources/Parrots/parrot_a_06.tres" id="7_7b4s8"]
+[ext_resource type="PackedScene" uid="uid://bruijiv6kv002" path="res://Scene/UI/level_season_01.tscn" id="8_5lyfn"]
+[ext_resource type="Resource" uid="uid://cyqu6rcvavsxj" path="res://Resources/Parrots/parrot_a_04.tres" id="9_pwrmd"]
+[ext_resource type="Resource" uid="uid://nbcf7uesqsm3" path="res://Resources/Parrots/parrot_a_05.tres" id="10_6go0j"]
+[ext_resource type="Resource" uid="uid://cd053u8cvgooo" path="res://Resources/Parrots/parrot_a_07.tres" id="11_003lx"]
+[ext_resource type="Resource" uid="uid://d0d0jp4vr5xes" path="res://Resources/LevelCondition/Score/objective_score_100.tres" id="12_30bje"]
+[ext_resource type="Script" uid="uid://jg4yqnjnyl7a" path="res://Script/GamePlay/LevelConfig/level_config.gd" id="13_rr4em"]
+[ext_resource type="Script" uid="uid://bgkrvhcwbd5f6" path="res://Script/GamePlay/LevelConfig/level_objective.gd" id="14_ytgxa"]
+[ext_resource type="Resource" uid="uid://bethuxnl8fv13" path="res://Resources/LevelCondition/Score/objective_score_50.tres" id="15_oug0g"]
+[ext_resource type="Resource" uid="uid://khk50kgmfmb2" path="res://Resources/LevelCondition/CreateSpecificParrot/objective_parrot_green_07.tres" id="16_kwcvu"]
+
+[resource]
+script = ExtResource("13_rr4em")
+level_id = "S05_L01"
+level_scene = ExtResource("8_5lyfn")
+drop_weights = Dictionary[ExtResource("1_blrcv"), int]({
+ExtResource("2_8px46"): 0,
+ExtResource("3_0n8y2"): 0,
+ExtResource("4_mhf10"): 0,
+ExtResource("5_ki4rd"): 0,
+ExtResource("6_oym7l"): 0,
+ExtResource("7_7b4s8"): 10
+})
+pool_overrides = Dictionary[ExtResource("1_blrcv"), int]({
+ExtResource("2_8px46"): 15,
+ExtResource("3_0n8y2"): 15,
+ExtResource("4_mhf10"): 15,
+ExtResource("5_ki4rd"): 15,
+ExtResource("6_oym7l"): 15,
+ExtResource("9_pwrmd"): 15,
+ExtResource("10_6go0j"): 15,
+ExtResource("7_7b4s8"): 15,
+ExtResource("11_003lx"): 15
+})
+primary_objectives = ExtResource("12_30bje")
+secondary_objectives = Array[ExtResource("14_ytgxa")]([ExtResource("15_oug0g"), ExtResource("16_kwcvu")])
+metadata/_custom_type_script = "uid://jg4yqnjnyl7a"

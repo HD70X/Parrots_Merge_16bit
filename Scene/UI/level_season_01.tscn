@@ -1,0 +1,362 @@
+[gd_scene load_steps=24 format=3 uid="uid://bruijiv6kv002"]
+
+[ext_resource type="Script" uid="uid://c5pm6m13wg5qq" path="res://Script/GamePlay/MainGame/Core/game_main.gd" id="1_uck5e"]
+[ext_resource type="Texture2D" uid="uid://ckwgd76wf1ywd" path="res://Art/Background/background_sky.png" id="2_uck5e"]
+[ext_resource type="Texture2D" uid="uid://ddhjuxerxsplq" path="res://Art/Background/background_season_01_montain.png" id="3_ujv4o"]
+[ext_resource type="Texture2D" uid="uid://ct71ky8favegr" path="res://Art/Background/level_fram_tree.png" id="4_3iiqu"]
+[ext_resource type="Texture2D" uid="uid://djmkmqaxgu106" path="res://Art/Background/red_line.png" id="5_syesm"]
+[ext_resource type="Script" uid="uid://d1hpfbxqpvs8r" path="res://Script/GamePlay/MainGame/input_handler.gd" id="6_x60fq"]
+[ext_resource type="Script" uid="uid://hql8rb03eepl" path="res://Script/GamePlay/MainGame/spawner.gd" id="7_ir01x"]
+[ext_resource type="Script" uid="uid://cguq8q66mvcu7" path="res://Script/GamePlay/MainGame/danger_zone.gd" id="8_7ws0q"]
+[ext_resource type="Script" uid="uid://3fbuxvpqgeb8" path="res://Script/GamePlay/MainGame/preview_sprite.gd" id="9_ahdho"]
+[ext_resource type="Script" uid="uid://dll6a58ic1nmy" path="res://Script/GamePlay/MainGame/ui_manager.gd" id="10_f8o3w"]
+[ext_resource type="Theme" uid="uid://cgft1fpai6tgb" path="res://Art/Theme/general_theme.tres" id="11_xvjhb"]
+[ext_resource type="PackedScene" uid="uid://u4e2vixj6tf6" path="res://Scene/UI/UI Parts/texture_button_condition.tscn" id="12_hj3vo"]
+[ext_resource type="PackedScene" uid="uid://c0osd57n16ydf" path="res://Scene/UI/UI Parts/texture_button_menu.tscn" id="13_i4u5d"]
+[ext_resource type="PackedScene" uid="uid://beju5xyfvrdrn" path="res://Scene/UI/UI Parts/texture_button_pause.tscn" id="13_syesm"]
+[ext_resource type="PackedScene" uid="uid://5t5c4exhikms" path="res://Scene/UI/UI Parts/star.tscn" id="14_igufl"]
+[ext_resource type="PackedScene" uid="uid://c6md6tv2go60d" path="res://Scene/UI/UI Parts/texture_button_retry.tscn" id="14_k640d"]
+[ext_resource type="PackedScene" uid="uid://0nl4nsdm1q4u" path="res://Scene/UI/UI Parts/texture_button_next.tscn" id="16_ujv4o"]
+[ext_resource type="PackedScene" uid="uid://cjqjpkybktise" path="res://Scene/UI/UI Parts/texture_button_play.tscn" id="17_3iiqu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iobcs"]
+size = Vector2(1212, 541)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6ch3"]
+size = Vector2(1210, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q80h"]
+size = Vector2(132, 2079)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3yam"]
+size = Vector2(131, 2079)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wqv7g"]
+radius = 3.1622777
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_uck5e")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BackgrounSky" type="TextureRect" parent="Background"]
+offset_right = 182.0
+offset_bottom = 320.0
+mouse_filter = 2
+texture = ExtResource("2_uck5e")
+
+[node name="BackgrounMontain" type="TextureRect" parent="Background"]
+offset_right = 182.0
+offset_bottom = 320.0
+mouse_filter = 2
+texture = ExtResource("3_ujv4o")
+
+[node name="TreeLeft" type="TextureRect" parent="Background"]
+offset_left = -342.0
+offset_top = 6.0
+offset_right = 342.0
+offset_bottom = 1920.0
+mouse_filter = 2
+texture = ExtResource("4_3iiqu")
+
+[node name="TreeRight" type="TextureRect" parent="Background"]
+offset_left = 735.0
+offset_top = 6.0
+offset_right = 1419.0
+offset_bottom = 1920.0
+mouse_filter = 2
+texture = ExtResource("4_3iiqu")
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_top = 540.0
+offset_right = 1092.0
+offset_bottom = 546.0
+mouse_filter = 2
+texture = ExtResource("5_syesm")
+
+[node name="GameWorld" type="Node2D" parent="."]
+
+[node name="InputHandler" type="Node" parent="GameWorld"]
+script = ExtResource("6_x60fq")
+
+[node name="Spawner" type="Node2D" parent="GameWorld"]
+script = ExtResource("7_ir01x")
+
+[node name="SpawnContainer" type="Node2D" parent="GameWorld"]
+
+[node name="DangerZone" type="Area2D" parent="GameWorld/SpawnContainer"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("8_7ws0q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/SpawnContainer/DangerZone"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(552, 269.5)
+shape = SubResource("RectangleShape2D_iobcs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GameWorld/SpawnContainer"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2DFloor" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D"]
+position = Vector2(552, 1998.5)
+shape = SubResource("RectangleShape2D_g6ch3")
+
+[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D"]
+position = Vector2(12, 1038.5)
+shape = SubResource("RectangleShape2D_8q80h")
+
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D"]
+position = Vector2(1091.5, 1038.5)
+shape = SubResource("RectangleShape2D_g3yam")
+
+[node name="AnchorPoint" type="StaticBody2D" parent="GameWorld/SpawnContainer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/SpawnContainer/AnchorPoint"]
+shape = SubResource("CircleShape2D_wqv7g")
+
+[node name="PreviewSprite" type="Sprite2D" parent="GameWorld"]
+modulate = Color(1, 1, 1, 0.6666667)
+script = ExtResource("9_ahdho")
+
+[node name="UIManager" type="CanvasLayer" parent="."]
+script = ExtResource("10_f8o3w")
+
+[node name="UIRoot" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("11_xvjhb")
+
+[node name="ParrotTimer" type="Node2D" parent="UIManager/UIRoot"]
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 19.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_top = 11
+theme_override_constants/margin_right = 11
+theme_override_constants/margin_bottom = 11
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ScoreLabel" type="Label" parent="UIManager/UIRoot/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 1
+theme = ExtResource("11_xvjhb")
+theme_override_font_sizes/font_size = 96
+text = "Score: {score}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConditionButton" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" instance=ExtResource("12_hj3vo")]
+layout_mode = 2
+size_flags_horizontal = 10
+mouse_default_cursor_shape = 2
+
+[node name="PauseButton" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" instance=ExtResource("13_syesm")]
+layout_mode = 2
+
+[node name="FailScreen" type="MarginContainer" parent="UIManager/UIRoot"]
+visible = false
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/FailScreen"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/FailScreen"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FailedTitle" type="Label" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0.09019608, 0.78431374)
+theme_override_font_sizes/font_size = 96
+text = "FAILED"
+horizontal_alignment = 1
+
+[node name="Space1" type="MarginContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Reason" type="Label" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Reasons"
+horizontal_alignment = 1
+
+[node name="Space2" type="MarginContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 64
+
+[node name="MenuButton" parent="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer" instance=ExtResource("13_i4u5d")]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="RetryButton" parent="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer" instance=ExtResource("14_k640d")]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="SucceedScreen" type="MarginContainer" parent="UIManager/UIRoot"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/SucceedScreen"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/SucceedScreen"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SucceedTitle" type="Label" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "SUCCEED"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="Star" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("14_igufl")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star2" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("14_igufl")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Star3" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("14_igufl")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer3" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 64
+
+[node name="MenuButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" instance=ExtResource("13_i4u5d")]
+layout_mode = 2
+
+[node name="RetryButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" instance=ExtResource("14_k640d")]
+layout_mode = 2
+
+[node name="NextButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" instance=ExtResource("16_ujv4o")]
+layout_mode = 2
+
+[node name="PauseScreen" type="MarginContainer" parent="UIManager/UIRoot"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/PauseScreen"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/PauseScreen"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="UIManager/UIRoot/PauseScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "Pause"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot/PauseScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/PauseScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="MenuButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" instance=ExtResource("13_i4u5d")]
+process_mode = 3
+layout_mode = 2
+
+[node name="RetryButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" instance=ExtResource("14_k640d")]
+process_mode = 3
+layout_mode = 2
+
+[node name="PlayButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" instance=ExtResource("17_3iiqu")]
+process_mode = 3
+layout_mode = 2
+
+[connection signal="body_entered" from="GameWorld/SpawnContainer/DangerZone" to="GameWorld/SpawnContainer/DangerZone" method="_on_body_entered"]
+[connection signal="body_exited" from="GameWorld/SpawnContainer/DangerZone" to="GameWorld/SpawnContainer/DangerZone" method="_on_body_exited"]
+[connection signal="pressed" from="UIManager/UIRoot/MarginContainer/HBoxContainer/PauseButton" to="UIManager" method="_pause"]
+[connection signal="pressed" from="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer/MenuButton" to="UIManager" method="_return_to_level_select"]
+[connection signal="pressed" from="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer/RetryButton" to="UIManager" method="_retry_level"]
+[connection signal="pressed" from="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer/MenuButton" to="UIManager" method="_return_to_level_select"]
+[connection signal="pressed" from="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer/RetryButton" to="UIManager" method="_retry_level"]
+[connection signal="pressed" from="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer/NextButton" to="UIManager" method="_next_level"]
+[connection signal="pressed" from="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer/MenuButton" to="UIManager" method="_return_to_level_select"]
+[connection signal="pressed" from="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer/RetryButton" to="UIManager" method="_retry_level"]
+[connection signal="pressed" from="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer/PlayButton" to="UIManager" method="_play"]

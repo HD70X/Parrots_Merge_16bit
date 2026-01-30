@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SeasonConfig" load_steps=5 format=3 uid="uid://cy682d10lqdqe"]
+
+[ext_resource type="Script" uid="uid://jg4yqnjnyl7a" path="res://Script/GamePlay/LevelConfig/level_config.gd" id="1_wkv8q"]
+[ext_resource type="Resource" uid="uid://dfrlinbfa6r4v" path="res://Resources/LevelConfig/test_level_S05_L01.tres" id="2_27xgn"]
+[ext_resource type="Script" uid="uid://c0i580jgknwka" path="res://Script/GamePlay/LevelConfig/season_config.gd" id="4_uuchg"]
+[ext_resource type="Texture2D" uid="uid://witn16bngmj5" path="res://Art/Sprite/Parrots/Parrot_base_green.png" id="5_wkv8q"]
+
+[resource]
+script = ExtResource("4_uuchg")
+season_id = "TEST_S5"
+season_name = "Season V"
+season_button_texture = ExtResource("5_wkv8q")
+unlock_stars_required = 6
+total_stars = 6
+levels = Array[ExtResource("1_wkv8q")]([ExtResource("2_27xgn")])
+metadata/_custom_type_script = "uid://c0i580jgknwka"
