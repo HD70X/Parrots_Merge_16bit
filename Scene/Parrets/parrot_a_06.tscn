@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ucg7kgjka56r"]
+[gd_scene format=3 uid="uid://ucg7kgjka56r"]
 
 [ext_resource type="Script" uid="uid://bflrvwbdxi41i" path="res://Script/Parrots/parrot_small.gd" id="1_p8xm5"]
 [ext_resource type="Texture2D" uid="uid://bq8l256abmmt7" path="res://Art/Sprite/Parrots/parrot-a-06.png" id="2_p8xm5"]
@@ -10,35 +10,35 @@ radius = 135.18137
 radius = 95.50464
 height = 270.7199
 
-[node name="ParrotBase" type="RigidBody2D"]
+[node name="ParrotBase" type="RigidBody2D" unique_id=945245624]
 collision_layer = 2
 collision_mask = 2
 contact_monitor = true
 max_contacts_reported = 8
 script = ExtResource("1_p8xm5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1750089585]
 texture = ExtResource("2_p8xm5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=543860869]
 position = Vector2(-58, -83)
 shape = SubResource("CircleShape2D_15lra")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1054099199]
 position = Vector2(-27, 75)
 rotation = -1.1274827
 scale = Vector2(1.025, 1.025)
 shape = SubResource("CapsuleShape2D_4grtr")
 
-[node name="DangerZoneWarningTimer" type="Timer" parent="."]
+[node name="DangerZoneWarningTimer" type="Timer" parent="." unique_id=804163987]
 wait_time = 0.5
 one_shot = true
 
-[node name="DangerZoneTimeoutTimer" type="Timer" parent="."]
+[node name="DangerZoneTimeoutTimer" type="Timer" parent="." unique_id=1985622482]
 wait_time = 3.5
 one_shot = true
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=1997992758]
 update_rotation = false
 update_scale = false
 

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SeasonCollection" load_steps=8 format=3 uid="uid://5ecwb7qt6bgm"]
+[gd_resource type="Resource" script_class="SeasonCollection" format=3 uid="uid://5ecwb7qt6bgm"]
 
 [ext_resource type="Script" uid="uid://djbdcns22ulu6" path="res://Script/GamePlay/LevelConfig/season_collection.gd" id="1_ekvwq"]
 [ext_resource type="Script" uid="uid://c0i580jgknwka" path="res://Script/GamePlay/LevelConfig/season_config.gd" id="2_gh01b"]

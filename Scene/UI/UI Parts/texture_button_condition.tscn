@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://u4e2vixj6tf6"]
+[gd_scene format=3 uid="uid://u4e2vixj6tf6"]
 
 [ext_resource type="Texture2D" uid="uid://22wdu78oqhp0" path="res://Art/Sprite/UI/ui_sprite_sheet.png" id="1_p08a8"]
 
@@ -14,7 +14,7 @@ region = Rect2(300, 0, 144, 150)
 atlas = ExtResource("1_p08a8")
 region = Rect2(300, 312, 144, 150)
 
-[node name="ConditionButton" type="TextureButton"]
+[node name="ConditionButton" type="TextureButton" unique_id=828242132]
 offset_right = 19.0
 offset_bottom = 19.0
 texture_normal = SubResource("AtlasTexture_p08a8")

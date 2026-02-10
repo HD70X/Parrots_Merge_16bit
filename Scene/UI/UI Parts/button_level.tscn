@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ki60key0emsi"]
+[gd_scene format=3 uid="uid://ki60key0emsi"]
 
 [ext_resource type="Theme" uid="uid://cgft1fpai6tgb" path="res://Art/Theme/general_theme.tres" id="1_wy4pf"]
 [ext_resource type="Script" uid="uid://dn4vteu38ydgt" path="res://Script/UI/button_level.gd" id="2_hys8l"]
@@ -18,7 +18,7 @@ region = Rect2(294, 468, 66, 72)
 atlas = ExtResource("3_4wm2p")
 region = Rect2(222, 468, 66, 72)
 
-[node name="LevelButton" type="MarginContainer"]
+[node name="LevelButton" type="MarginContainer" unique_id=389573595]
 custom_minimum_size = Vector2(216, 216)
 offset_right = 111.0
 offset_bottom = 111.0
@@ -27,164 +27,164 @@ script = ExtResource("2_hys8l")
 _button_text = "99"
 laber_transform = Vector2(0, 3)
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1055207982]
 layout_mode = 2
 
-[node name="StarControl" type="Node2D" parent="Button"]
+[node name="StarControl" type="Node2D" parent="Button" unique_id=1031089289]
 
-[node name="StarSlotDisable" type="Node2D" parent="Button/StarControl"]
+[node name="StarSlotDisable" type="Node2D" parent="Button/StarControl" unique_id=111521601]
 
-[node name="MarginContainer" type="MarginContainer" parent="Button/StarControl/StarSlotDisable"]
+[node name="MarginContainer" type="MarginContainer" parent="Button/StarControl/StarSlotDisable" unique_id=1694128889]
 offset_right = 105.0
 offset_bottom = 51.0
 theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer" unique_id=1895720616]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="StarSlot_1" type="VBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer"]
+[node name="StarSlot_1" type="VBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer" unique_id=1940350873]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_1"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_1" unique_id=488956094]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_1"]
+[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_1" unique_id=1784158747]
 layout_mode = 2
 texture = SubResource("AtlasTexture_jq47e")
 
-[node name="StarSlot_2" type="VBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer"]
+[node name="StarSlot_2" type="VBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer" unique_id=2086095191]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_2"]
+[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_2" unique_id=461085731]
 layout_mode = 2
 texture = SubResource("AtlasTexture_jq47e")
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_2"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_2" unique_id=700756911]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="StarSlot_3" type="VBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer"]
+[node name="StarSlot_3" type="VBoxContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer" unique_id=374172978]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_3"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_3" unique_id=290007014]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_3"]
+[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlotDisable/MarginContainer/HBoxContainer/StarSlot_3" unique_id=464900895]
 layout_mode = 2
 texture = SubResource("AtlasTexture_jq47e")
 
-[node name="StarSlot" type="Node2D" parent="Button/StarControl"]
+[node name="StarSlot" type="Node2D" parent="Button/StarControl" unique_id=922217962]
 
-[node name="MarginContainer" type="MarginContainer" parent="Button/StarControl/StarSlot"]
+[node name="MarginContainer" type="MarginContainer" parent="Button/StarControl/StarSlot" unique_id=1857491764]
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer" unique_id=1385164719]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="StarSlot_1" type="VBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer"]
+[node name="StarSlot_1" type="VBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer" unique_id=442912082]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_1"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_1" unique_id=2088352731]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_1"]
+[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_1" unique_id=1099347690]
 layout_mode = 2
 texture = SubResource("AtlasTexture_rb51o")
 
-[node name="StarSlot_2" type="VBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer"]
+[node name="StarSlot_2" type="VBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer" unique_id=929824379]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_2"]
+[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_2" unique_id=1220544181]
 layout_mode = 2
 texture = SubResource("AtlasTexture_rb51o")
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_2"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_2" unique_id=1066228974]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="StarSlot_3" type="VBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer"]
+[node name="StarSlot_3" type="VBoxContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer" unique_id=790396316]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_3"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_3" unique_id=1427360934]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_3"]
+[node name="StarSlot" type="TextureRect" parent="Button/StarControl/StarSlot/MarginContainer/HBoxContainer/StarSlot_3" unique_id=230644495]
 layout_mode = 2
 texture = SubResource("AtlasTexture_rb51o")
 
-[node name="Stars" type="Node2D" parent="Button/StarControl"]
+[node name="Stars" type="Node2D" parent="Button/StarControl" unique_id=1653173072]
 
-[node name="MarginContainer" type="MarginContainer" parent="Button/StarControl/Stars"]
+[node name="MarginContainer" type="MarginContainer" parent="Button/StarControl/Stars" unique_id=619174958]
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Button/StarControl/Stars/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Button/StarControl/Stars/MarginContainer" unique_id=1347793693]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Star_1" type="VBoxContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer"]
+[node name="Star_1" type="VBoxContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer" unique_id=1924066326]
 visible = false
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_1"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_1" unique_id=451703182]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="Star" type="TextureRect" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_1"]
+[node name="Star" type="TextureRect" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_1" unique_id=1940943022]
 layout_mode = 2
 texture = SubResource("AtlasTexture_wc088")
 
-[node name="Star_2" type="VBoxContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer"]
+[node name="Star_2" type="VBoxContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer" unique_id=1609769248]
 visible = false
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Star" type="TextureRect" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_2"]
+[node name="Star" type="TextureRect" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_2" unique_id=331190509]
 layout_mode = 2
 texture = SubResource("AtlasTexture_wc088")
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_2"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_2" unique_id=1658203194]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="Star_3" type="VBoxContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer"]
+[node name="Star_3" type="VBoxContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer" unique_id=1571853678]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Container" type="MarginContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_3"]
+[node name="Container" type="MarginContainer" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_3" unique_id=1702882812]
 custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
 
-[node name="Star" type="TextureRect" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_3"]
+[node name="Star" type="TextureRect" parent="Button/StarControl/Stars/MarginContainer/HBoxContainer/Star_3" unique_id=1922376993]
 layout_mode = 2
 texture = SubResource("AtlasTexture_wc088")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1208685288]
 layout_mode = 2
 size_flags_vertical = 8
 mouse_filter = 2
 theme_override_constants/margin_bottom = 6
 
-[node name="LayoutLabel" type="Label" parent="MarginContainer"]
+[node name="LayoutLabel" type="Label" parent="MarginContainer" unique_id=1037903964]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -194,14 +194,14 @@ text = "99"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MarginContainer/LayoutLabel"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MarginContainer/LayoutLabel" unique_id=504652181]
 remote_path = NodePath("../../../CanvasGroup")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=156695815]
 material = ExtResource("3_nctup")
 position = Vector2(36, 58)
 
-[node name="Label" type="Label" parent="CanvasGroup"]
+[node name="Label" type="Label" parent="CanvasGroup" unique_id=126443449]
 texture_filter = 1
 offset_right = 144.0
 offset_bottom = 152.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbfnucpg8x8t4"]
+[gd_scene format=3 uid="uid://cbfnucpg8x8t4"]
 
 [ext_resource type="Texture2D" uid="uid://c17tnuwjau1qv" path="res://Art/Background/background_season_01.png" id="1_eafhg"]
 [ext_resource type="Script" uid="uid://lxji6in6i2c0" path="res://Script/UI/level_select_menu.gd" id="2_apcgc"]
@@ -12,20 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://dk4sfxrbvy4xm" path="res://Scene/UI/UI Parts/notice_dialog.tscn" id="8_8usr7"]
 [ext_resource type="Script" uid="uid://bimi8ml8ye0qj" path="res://Script/UI/scroll_container_drage_effect.gd" id="9_l0ine"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1717350109]
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1697892784]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_eafhg")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=372915250]
 script = ExtResource("2_apcgc")
 season_button_secne = ExtResource("2_i8sip")
 level_button_secne = ExtResource("4_7bumt")
 main_menu_secne = ExtResource("5_l0ine")
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1093834918]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,7 +36,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("5_2bb75")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1057408718]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,47 +44,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TopControlBar" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer"]
+[node name="TopControlBar" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1382288699]
 layout_mode = 2
 
-[node name="BackButton" parent="CanvasLayer/Control/VBoxContainer/TopControlBar" instance=ExtResource("6_xh8np")]
+[node name="BackButton" parent="CanvasLayer/Control/VBoxContainer/TopControlBar" unique_id=542850587 instance=ExtResource("6_xh8np")]
 layout_mode = 2
 size_flags_horizontal = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer/TopControlBar"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer/TopControlBar" unique_id=1487663822]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/VBoxContainer/TopControlBar/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/VBoxContainer/TopControlBar/HBoxContainer" unique_id=122598801]
 layout_mode = 2
 texture = ExtResource("7_l0ine")
 stretch_mode = 5
 
-[node name="PlayersStars" type="Label" parent="CanvasLayer/Control/VBoxContainer/TopControlBar/HBoxContainer"]
+[node name="PlayersStars" type="Label" parent="CanvasLayer/Control/VBoxContainer/TopControlBar/HBoxContainer" unique_id=1548696501]
 layout_mode = 2
 theme_override_font_sizes/font_size = 96
 text = " {stars} "
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1778316837]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SeasonButtonRoot" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer"]
+[node name="SeasonButtonRoot" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer" unique_id=1446925282]
 visible = false
 layout_mode = 2
 script = ExtResource("9_l0ine")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer/SeasonButtonRoot"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer/SeasonButtonRoot" unique_id=1860709696]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_constants/separation = 256
 
-[node name="LevelButtonRoot" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer"]
+[node name="LevelButtonRoot" type="ScrollContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer" unique_id=706225004]
 visible = false
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer/LevelButtonRoot"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/VBoxContainer/MarginContainer/LevelButtonRoot" unique_id=1517412282]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -92,7 +92,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 4
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control" unique_id=1223770611]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,11 +101,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ConfirmationDialog" parent="CanvasLayer/Control/CenterContainer" instance=ExtResource("6_beh2q")]
+[node name="ConfirmationDialog" parent="CanvasLayer/Control/CenterContainer" unique_id=1213499598 instance=ExtResource("6_beh2q")]
 visible = false
 layout_mode = 2
 
-[node name="NoticeDialog" parent="CanvasLayer/Control/CenterContainer" instance=ExtResource("8_8usr7")]
+[node name="NoticeDialog" parent="CanvasLayer/Control/CenterContainer" unique_id=1747085982 instance=ExtResource("8_8usr7")]
 visible = false
 layout_mode = 2
 

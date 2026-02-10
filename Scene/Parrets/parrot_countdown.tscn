@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dmb0dal53eqdk"]
+[gd_scene format=3 uid="uid://dmb0dal53eqdk"]
 
 [ext_resource type="Texture2D" uid="uid://b5bb3h1mpnbmx" path="res://Art/Sprite/UI/parrot_timer.png" id="1_fcb23"]
 [ext_resource type="Script" uid="uid://cn5bbm006ovar" path="res://Script/GamePlay/MainGame/parrot_countdown.gd" id="2_dyxqn"]
@@ -263,7 +263,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="CountdownTimer" type="AnimatedSprite2D"]
+[node name="CountdownTimer" type="AnimatedSprite2D" unique_id=2050551156]
 visible = false
 sprite_frames = SubResource("SpriteFrames_1qia7")
 script = ExtResource("2_dyxqn")

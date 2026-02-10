@@ -1,21 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvwd4jmj0n4w8"]
+[gd_scene format=3 uid="uid://bvwd4jmj0n4w8"]
 
 [ext_resource type="Script" uid="uid://bgbqligre610t" path="res://Script/MainMenu/main_menu.gd" id="1_6i1m0"]
 [ext_resource type="Texture2D" uid="uid://c17tnuwjau1qv" path="res://Art/Background/background_season_01.png" id="2_6i1m0"]
 [ext_resource type="Theme" uid="uid://cgft1fpai6tgb" path="res://Art/Theme/general_theme.tres" id="3_6aje7"]
 [ext_resource type="PackedScene" uid="uid://cyp3a58fjp01t" path="res://Scene/UI/UI Parts/button.tscn" id="4_m8m1u"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=15859568]
 script = ExtResource("1_6i1m0")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=488520085]
 offset_right = 182.0
 offset_bottom = 320.0
 texture = ExtResource("2_6i1m0")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2058292235]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=593493955]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("3_6aje7")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=631000795]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,40 +37,40 @@ theme_override_constants/margin_top = 360
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 360
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=659434982]
 layout_mode = 2
 
-[node name="Control2" type="Control" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=648527939]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1239495821]
 layout_mode = 2
 theme_override_font_sizes/font_size = 320
 text = "PARROTS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1511213105]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=152557835]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 12
 
-[node name="StarButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_m8m1u")]
+[node name="StarButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=780261320 instance=ExtResource("4_m8m1u")]
 layout_mode = 2
 size_flags_horizontal = 1
 _button_text = "START"
 
-[node name="LevelsButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_m8m1u")]
+[node name="LevelsButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=613652936 instance=ExtResource("4_m8m1u")]
 layout_mode = 2
 size_flags_horizontal = 1
 _button_text = "LEVEL"
 
-[node name="SettingButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_m8m1u")]
+[node name="SettingButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1163547219 instance=ExtResource("4_m8m1u")]
 layout_mode = 2
 size_flags_horizontal = 1
 _button_text = "SETTING"

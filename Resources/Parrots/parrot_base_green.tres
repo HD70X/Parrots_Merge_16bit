@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ThrowableData" load_steps=4 format=3 uid="uid://bk8wfb2b5ymql"]
+[gd_resource type="Resource" script_class="ThrowableData" format=3 uid="uid://bk8wfb2b5ymql"]
 
 [ext_resource type="Texture2D" uid="uid://witn16bngmj5" path="res://Art/Sprite/Parrots/Parrot_base_green.png" id="1_aif13"]
 [ext_resource type="Script" uid="uid://btarij3lja7ue" path="res://Script/GamePlay/MainGame/throwable_data.gd" id="1_vourk"]

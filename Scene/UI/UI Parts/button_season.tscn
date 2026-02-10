@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4xl0mmj82gpd"]
+[gd_scene format=3 uid="uid://b4xl0mmj82gpd"]
 
 [ext_resource type="Theme" uid="uid://cgft1fpai6tgb" path="res://Art/Theme/general_theme.tres" id="1_1yhdm"]
 [ext_resource type="Script" uid="uid://dtrafd4hhf3yb" path="res://Script/UI/button_season.gd" id="2_1yhdm"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ctjir8urpc36f" path="res://Art/Sprite/UI/season_button_star.png" id="6_dmabb"]
 [ext_resource type="Texture2D" uid="uid://b7gmlcloc6id4" path="res://Art/Sprite/UI/Button/season_button_star_unlock.png" id="8_y4v3u"]
 
-[node name="SeasonButton" type="MarginContainer"]
+[node name="SeasonButton" type="MarginContainer" unique_id=1739347660]
 offset_right = 36.0
 offset_bottom = 18.0
 size_flags_horizontal = 4
@@ -19,10 +19,10 @@ script = ExtResource("2_1yhdm")
 _button_text = "Season Issue"
 laber_transform = Vector2(0, 6)
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1713569384]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2132818057]
 custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 mouse_filter = 2
@@ -31,20 +31,20 @@ theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 42
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2107034254]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Contents" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Contents" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=250878073]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Contents"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Contents" unique_id=153716509]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="LayoutLabel" type="Label" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer"]
+[node name="LayoutLabel" type="Label" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer" unique_id=1956717838]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -55,17 +55,17 @@ text = "SEASON XXI"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer/LayoutLabel"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer/LayoutLabel" unique_id=1723340676]
 remote_path = NodePath("../../../../../../CanvasGroup")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer" unique_id=2133458206]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Contents/VBoxContainer/MarginContainer" unique_id=724472672]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -74,17 +74,17 @@ mouse_filter = 2
 texture = ExtResource("5_dmabb")
 stretch_mode = 5
 
-[node name="Progress" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Progress" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=967359410]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Unlocked" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress"]
+[node name="Unlocked" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress" unique_id=889550277]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Unlocked"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Unlocked" unique_id=2017195192]
 modulate = Color(1, 1, 1, 0.6117647)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -92,13 +92,13 @@ size_flags_vertical = 4
 mouse_filter = 2
 texture = ExtResource("5_tf8lk")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Progress/Unlocked"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Progress/Unlocked" unique_id=1713005381]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 theme_override_constants/separation = 40
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress/Unlocked/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress/Unlocked/HBoxContainer" unique_id=27498343]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -106,25 +106,25 @@ mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Unlocked/HBoxContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Unlocked/HBoxContainer/MarginContainer" unique_id=597192764]
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 2
 texture = ExtResource("6_dmabb")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Progress/Unlocked/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Progress/Unlocked/HBoxContainer" unique_id=840567410]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 96
 text = "{collected_stars}/{total_stars}"
 horizontal_alignment = 1
 
-[node name="Locked" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress"]
+[node name="Locked" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress" unique_id=42234822]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Locked"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Locked" unique_id=187344768]
 modulate = Color(1, 1, 1, 0.6117647)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -132,41 +132,41 @@ size_flags_vertical = 4
 mouse_filter = 2
 texture = ExtResource("5_tf8lk")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Progress/Locked"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Progress/Locked" unique_id=1910490466]
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
 
-[node name="UnlockStars" type="Label" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer"]
+[node name="UnlockStars" type="Label" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer" unique_id=566156070]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 96
 text = "{number}"
 horizontal_alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer" unique_id=1557044475]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer/MarginContainer" unique_id=855830488]
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 2
 texture = ExtResource("8_y4v3u")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Progress/Locked/HBoxContainer" unique_id=1216986437]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 96
 text = "unlock"
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=2057663116]
 material = ExtResource("3_tf8lk")
 position = Vector2(223, 6)
 
-[node name="Label" type="Label" parent="CanvasGroup"]
+[node name="Label" type="Label" parent="CanvasGroup" unique_id=442863627]
 texture_filter = 1
 offset_right = 354.0
 offset_bottom = 76.0

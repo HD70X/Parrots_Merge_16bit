@@ -1,3 +1,4 @@
+# progression_manager.gd
 extends Node
 class_name ProgressionManager
 

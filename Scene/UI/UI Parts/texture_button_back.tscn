@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs03yp5rsshoe"]
+[gd_scene format=3 uid="uid://bs03yp5rsshoe"]
 
 [ext_resource type="Texture2D" uid="uid://22wdu78oqhp0" path="res://Art/Sprite/UI/ui_sprite_sheet.png" id="1_ex8v6"]
 
@@ -14,7 +14,7 @@ region = Rect2(450, 0, 144, 150)
 atlas = ExtResource("1_ex8v6")
 region = Rect2(450, 312, 144, 150)
 
-[node name="BackButton" type="TextureButton"]
+[node name="BackButton" type="TextureButton" unique_id=262056837]
 offset_right = 19.0
 offset_bottom = 19.0
 texture_normal = SubResource("AtlasTexture_juknj")

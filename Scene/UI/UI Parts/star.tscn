@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://5t5c4exhikms"]
+[gd_scene format=3 uid="uid://5t5c4exhikms"]
 
 [ext_resource type="Script" uid="uid://8nno6cav7yap" path="res://Script/UI/star_animation.gd" id="1_6iie8"]
 [ext_resource type="Texture2D" uid="uid://yhfmgc8o2xsu" path="res://Art/Sprite/UI/star_sprite_sheet.png" id="1_7nckw"]
@@ -96,20 +96,18 @@ _data = {
 &"into": SubResource("Animation_tmkny")
 }
 
-[node name="Star" type="MarginContainer"]
+[node name="Star" type="MarginContainer" unique_id=2031283204]
 custom_minimum_size = Vector2(114, 114)
 offset_right = 114.0
 offset_bottom = 114.0
 script = ExtResource("1_6iie8")
 
-[node name="Sprites" type="Sprite2D" parent="."]
+[node name="Sprites" type="Sprite2D" parent="." unique_id=406471039]
 position = Vector2(171, 57)
 texture = ExtResource("1_7nckw")
 hframes = 12
 vframes = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites" unique_id=412608204]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_yyv7i")
-}
+libraries/ = SubResource("AnimationLibrary_yyv7i")

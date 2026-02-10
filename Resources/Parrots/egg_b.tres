@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ThrowableData" load_steps=4 format=3 uid="uid://ct4xmeaniv0uw"]
+[gd_resource type="Resource" script_class="ThrowableData" format=3 uid="uid://ct4xmeaniv0uw"]
 
 [ext_resource type="Texture2D" uid="uid://cs1g2koqj23h4" path="res://Art/Sprite/Parrots/egg-b.png" id="1_n7nhb"]
 [ext_resource type="PackedScene" uid="uid://bq6gaysoxmdwe" path="res://Scene/Parrets/egg_b.tscn" id="2_1dpao"]

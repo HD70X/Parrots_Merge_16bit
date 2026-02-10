@@ -33,6 +33,7 @@ func start_level(config: LevelConfig, _season_config: SeasonConfig):
 	#print("完成关卡初始化")
 	game_over = false
 	get_tree().change_scene_to_packed(config.level_scene)
+	PlayerData.progression.record_default_level(_season_config.season_id, config.level_id)
 
 func _game_fail(fail_reason: String):
 	if game_over:

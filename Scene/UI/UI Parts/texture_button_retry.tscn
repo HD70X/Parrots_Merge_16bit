@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6md6tv2go60d"]
+[gd_scene format=3 uid="uid://c6md6tv2go60d"]
 
 [ext_resource type="Texture2D" uid="uid://22wdu78oqhp0" path="res://Art/Sprite/UI/ui_sprite_sheet.png" id="1_5sabp"]
 
@@ -14,7 +14,7 @@ region = Rect2(600, 0, 144, 150)
 atlas = ExtResource("1_5sabp")
 region = Rect2(600, 312, 144, 150)
 
-[node name="RetryButton" type="TextureButton"]
+[node name="RetryButton" type="TextureButton" unique_id=339527121]
 offset_right = 19.0
 offset_bottom = 19.0
 texture_normal = SubResource("AtlasTexture_83xgq")

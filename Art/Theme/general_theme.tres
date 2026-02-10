@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://cgft1fpai6tgb"]
+[gd_resource type="Theme" format=3 uid="uid://cgft1fpai6tgb"]
 
 [ext_resource type="FontFile" uid="uid://ev3knnkjthyy" path="res://Art/Forts/m5x7.ttf" id="1_f6asn"]
 [ext_resource type="Texture2D" uid="uid://nalplmbblpkl" path="res://Art/Sprite/UI/Button/button_outline_disable.png" id="2_f6asn"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bruijiv6kv002"]
+[gd_scene format=3 uid="uid://bruijiv6kv002"]
 
 [ext_resource type="Script" uid="uid://c5pm6m13wg5qq" path="res://Script/GamePlay/MainGame/Core/game_main.gd" id="1_uck5e"]
 [ext_resource type="Texture2D" uid="uid://ckwgd76wf1ywd" path="res://Art/Background/background_sky.png" id="2_uck5e"]
@@ -34,24 +34,24 @@ size = Vector2(131, 2079)
 [sub_resource type="CircleShape2D" id="CircleShape2D_wqv7g"]
 radius = 3.1622777
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1404823320]
 script = ExtResource("1_uck5e")
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="." unique_id=1154143344]
 
-[node name="BackgrounSky" type="TextureRect" parent="Background"]
+[node name="BackgrounSky" type="TextureRect" parent="Background" unique_id=1393782004]
 offset_right = 182.0
 offset_bottom = 320.0
 mouse_filter = 2
 texture = ExtResource("2_uck5e")
 
-[node name="BackgrounMontain" type="TextureRect" parent="Background"]
+[node name="BackgrounMontain" type="TextureRect" parent="Background" unique_id=1773282882]
 offset_right = 182.0
 offset_bottom = 320.0
 mouse_filter = 2
 texture = ExtResource("3_ujv4o")
 
-[node name="TreeLeft" type="TextureRect" parent="Background"]
+[node name="TreeLeft" type="TextureRect" parent="Background" unique_id=130787868]
 offset_left = -342.0
 offset_top = 6.0
 offset_right = 342.0
@@ -59,7 +59,7 @@ offset_bottom = 1920.0
 mouse_filter = 2
 texture = ExtResource("4_3iiqu")
 
-[node name="TreeRight" type="TextureRect" parent="Background"]
+[node name="TreeRight" type="TextureRect" parent="Background" unique_id=853493433]
 offset_left = 735.0
 offset_top = 6.0
 offset_right = 1419.0
@@ -67,63 +67,63 @@ offset_bottom = 1920.0
 mouse_filter = 2
 texture = ExtResource("4_3iiqu")
 
-[node name="TextureRect" type="TextureRect" parent="Background"]
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=933416509]
 offset_top = 540.0
 offset_right = 1092.0
 offset_bottom = 546.0
 mouse_filter = 2
 texture = ExtResource("5_syesm")
 
-[node name="GameWorld" type="Node2D" parent="."]
+[node name="GameWorld" type="Node2D" parent="." unique_id=1822869942]
 
-[node name="InputHandler" type="Node" parent="GameWorld"]
+[node name="InputHandler" type="Node" parent="GameWorld" unique_id=1067712439]
 script = ExtResource("6_x60fq")
 
-[node name="Spawner" type="Node2D" parent="GameWorld"]
+[node name="Spawner" type="Node2D" parent="GameWorld" unique_id=1053031583]
 script = ExtResource("7_ir01x")
 
-[node name="SpawnContainer" type="Node2D" parent="GameWorld"]
+[node name="SpawnContainer" type="Node2D" parent="GameWorld" unique_id=1409197139]
 
-[node name="DangerZone" type="Area2D" parent="GameWorld/SpawnContainer"]
+[node name="DangerZone" type="Area2D" parent="GameWorld/SpawnContainer" unique_id=831937458]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("8_7ws0q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/SpawnContainer/DangerZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/SpawnContainer/DangerZone" unique_id=1603287245]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(552, 269.5)
 shape = SubResource("RectangleShape2D_iobcs")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="GameWorld/SpawnContainer"]
+[node name="StaticBody2D" type="StaticBody2D" parent="GameWorld/SpawnContainer" unique_id=942378235]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2DFloor" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D"]
+[node name="CollisionShape2DFloor" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D" unique_id=1655371943]
 position = Vector2(552, 1998.5)
 shape = SubResource("RectangleShape2D_g6ch3")
 
-[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D"]
+[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D" unique_id=785461226]
 position = Vector2(12, 1038.5)
 shape = SubResource("RectangleShape2D_8q80h")
 
-[node name="CollisionShape2DRight" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D"]
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="GameWorld/SpawnContainer/StaticBody2D" unique_id=1603760062]
 position = Vector2(1091.5, 1038.5)
 shape = SubResource("RectangleShape2D_g3yam")
 
-[node name="AnchorPoint" type="StaticBody2D" parent="GameWorld/SpawnContainer"]
+[node name="AnchorPoint" type="StaticBody2D" parent="GameWorld/SpawnContainer" unique_id=1634179029]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/SpawnContainer/AnchorPoint"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/SpawnContainer/AnchorPoint" unique_id=66202262]
 shape = SubResource("CircleShape2D_wqv7g")
 
-[node name="PreviewSprite" type="Sprite2D" parent="GameWorld"]
+[node name="PreviewSprite" type="Sprite2D" parent="GameWorld" unique_id=866905423]
 modulate = Color(1, 1, 1, 0.6666667)
 script = ExtResource("9_ahdho")
 
-[node name="UIManager" type="CanvasLayer" parent="."]
+[node name="UIManager" type="CanvasLayer" parent="." unique_id=1804955641]
 script = ExtResource("10_f8o3w")
 
-[node name="UIRoot" type="Control" parent="UIManager"]
+[node name="UIRoot" type="Control" parent="UIManager" unique_id=246259312]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -135,9 +135,9 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("11_xvjhb")
 
-[node name="ParrotTimer" type="Node2D" parent="UIManager/UIRoot"]
+[node name="ParrotTimer" type="Node2D" parent="UIManager/UIRoot" unique_id=1103710607]
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot" unique_id=2092091837]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -149,11 +149,11 @@ theme_override_constants/margin_top = 11
 theme_override_constants/margin_right = 11
 theme_override_constants/margin_bottom = 11
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/MarginContainer" unique_id=1367720028]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="ScoreLabel" type="Label" parent="UIManager/UIRoot/MarginContainer/HBoxContainer"]
+[node name="ScoreLabel" type="Label" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" unique_id=1525325187]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 1
@@ -163,15 +163,15 @@ text = "Score: {score}"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ConditionButton" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" instance=ExtResource("12_hj3vo")]
+[node name="ConditionButton" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" unique_id=885184248 instance=ExtResource("12_hj3vo")]
 layout_mode = 2
 size_flags_horizontal = 10
 mouse_default_cursor_shape = 2
 
-[node name="PauseButton" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" instance=ExtResource("13_syesm")]
+[node name="PauseButton" parent="UIManager/UIRoot/MarginContainer/HBoxContainer" unique_id=1142922120 instance=ExtResource("13_syesm")]
 layout_mode = 2
 
-[node name="FailScreen" type="MarginContainer" parent="UIManager/UIRoot"]
+[node name="FailScreen" type="MarginContainer" parent="UIManager/UIRoot" unique_id=1223313177]
 visible = false
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 1
@@ -182,51 +182,51 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 
-[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/FailScreen"]
+[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/FailScreen" unique_id=1088412722]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 size_flags_vertical = 4
 color = Color(0, 0, 0, 0.46666667)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/FailScreen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/FailScreen" unique_id=687529385]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="FailedTitle" type="Label" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+[node name="FailedTitle" type="Label" parent="UIManager/UIRoot/FailScreen/VBoxContainer" unique_id=955711739]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0.09019608, 0.78431374)
 theme_override_font_sizes/font_size = 96
 text = "FAILED"
 horizontal_alignment = 1
 
-[node name="Space1" type="MarginContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+[node name="Space1" type="MarginContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer" unique_id=209443051]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="Reason" type="Label" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+[node name="Reason" type="Label" parent="UIManager/UIRoot/FailScreen/VBoxContainer" unique_id=1084488231]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "Reasons"
 horizontal_alignment = 1
 
-[node name="Space2" type="MarginContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+[node name="Space2" type="MarginContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer" unique_id=1231551379]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/FailScreen/VBoxContainer" unique_id=1505966161]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 64
 
-[node name="MenuButton" parent="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer" instance=ExtResource("13_i4u5d")]
+[node name="MenuButton" parent="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer" unique_id=1117760578 instance=ExtResource("13_i4u5d")]
 layout_mode = 2
 size_flags_horizontal = 6
 
-[node name="RetryButton" parent="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer" instance=ExtResource("14_k640d")]
+[node name="RetryButton" parent="UIManager/UIRoot/FailScreen/VBoxContainer/HBoxContainer" unique_id=1059197263 instance=ExtResource("14_k640d")]
 layout_mode = 2
 size_flags_horizontal = 6
 
-[node name="SucceedScreen" type="MarginContainer" parent="UIManager/UIRoot"]
+[node name="SucceedScreen" type="MarginContainer" parent="UIManager/UIRoot" unique_id=2120206109]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -236,73 +236,73 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 
-[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/SucceedScreen"]
+[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/SucceedScreen" unique_id=573422535]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 size_flags_vertical = 4
 color = Color(0, 0, 0, 0.46666667)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/SucceedScreen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/SucceedScreen" unique_id=165209491]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="SucceedTitle" type="Label" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+[node name="SucceedTitle" type="Label" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer" unique_id=1413235733]
 layout_mode = 2
 theme_override_font_sizes/font_size = 96
 text = "SUCCEED"
 horizontal_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer" unique_id=1786795418]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer" unique_id=880045698]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer" unique_id=2136121720]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 32
 
-[node name="Star" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("14_igufl")]
+[node name="Star" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" unique_id=857639670 instance=ExtResource("14_igufl")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Star2" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("14_igufl")]
+[node name="Star2" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1549132756 instance=ExtResource("14_igufl")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Star3" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("14_igufl")]
+[node name="Star3" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1040005331 instance=ExtResource("14_igufl")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="MarginContainer3" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+[node name="MarginContainer3" type="MarginContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer" unique_id=1588711182]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer" unique_id=2021386554]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 64
 
-[node name="MenuButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" instance=ExtResource("13_i4u5d")]
+[node name="MenuButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" unique_id=2030466802 instance=ExtResource("13_i4u5d")]
 layout_mode = 2
 
-[node name="RetryButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" instance=ExtResource("14_k640d")]
+[node name="RetryButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" unique_id=884826556 instance=ExtResource("14_k640d")]
 layout_mode = 2
 
-[node name="NextButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" instance=ExtResource("16_ujv4o")]
+[node name="NextButton" parent="UIManager/UIRoot/SucceedScreen/VBoxContainer/HBoxContainer" unique_id=1447755589 instance=ExtResource("16_ujv4o")]
 layout_mode = 2
 
-[node name="PauseScreen" type="MarginContainer" parent="UIManager/UIRoot"]
+[node name="PauseScreen" type="MarginContainer" parent="UIManager/UIRoot" unique_id=389253107]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -312,40 +312,40 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 
-[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/PauseScreen"]
+[node name="ColorRect" type="ColorRect" parent="UIManager/UIRoot/PauseScreen" unique_id=87681152]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 size_flags_vertical = 4
 color = Color(0, 0, 0, 0.46666667)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/PauseScreen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/UIRoot/PauseScreen" unique_id=1798702433]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="UIManager/UIRoot/PauseScreen/VBoxContainer"]
+[node name="Label" type="Label" parent="UIManager/UIRoot/PauseScreen/VBoxContainer" unique_id=1178257434]
 layout_mode = 2
 theme_override_font_sizes/font_size = 96
 text = "Pause"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot/PauseScreen/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/UIRoot/PauseScreen/VBoxContainer" unique_id=592403265]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/PauseScreen/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/UIRoot/PauseScreen/VBoxContainer" unique_id=2059780692]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="MenuButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" instance=ExtResource("13_i4u5d")]
+[node name="MenuButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" unique_id=1163442411 instance=ExtResource("13_i4u5d")]
 process_mode = 3
 layout_mode = 2
 
-[node name="RetryButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" instance=ExtResource("14_k640d")]
+[node name="RetryButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" unique_id=1077231404 instance=ExtResource("14_k640d")]
 process_mode = 3
 layout_mode = 2
 
-[node name="PlayButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" instance=ExtResource("17_3iiqu")]
+[node name="PlayButton" parent="UIManager/UIRoot/PauseScreen/VBoxContainer/HBoxContainer" unique_id=1102364002 instance=ExtResource("17_3iiqu")]
 process_mode = 3
 layout_mode = 2
 

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ThrowableData" load_steps=5 format=3 uid="uid://cyqu6rcvavsxj"]
+[gd_resource type="Resource" script_class="ThrowableData" format=3 uid="uid://cyqu6rcvavsxj"]
 
 [ext_resource type="Resource" uid="uid://nbcf7uesqsm3" path="res://Resources/Parrots/parrot_a_05.tres" id="1_1rx33"]
 [ext_resource type="Texture2D" uid="uid://c8astawaxljt6" path="res://Art/Sprite/Parrots/parrot-a-04.png" id="2_vycp7"]

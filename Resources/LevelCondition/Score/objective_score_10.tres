@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ScoreObjective" load_steps=2 format=3 uid="uid://dtm28m12af6ru"]
+[gd_resource type="Resource" script_class="ScoreObjective" format=3 uid="uid://dtm28m12af6ru"]
 
 [ext_resource type="Script" uid="uid://c1txsukuounxt" path="res://Script/GamePlay/LevelConfig/objective_score.gd" id="1_3m1iw"]
 
