@@ -3,6 +3,7 @@ extends Node2D
 @onready var start_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer/StarButton
 @onready var level_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer/LevelsButton
 @onready var setting_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer/SettingButton
+@onready var encyclopedia_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer/EncyclopediaButton
 
 # 预加载关卡数据
 @onready var season_collection: SeasonCollection = preload("res://Resources/LevelConfig/season_collection.tres")
@@ -13,6 +14,7 @@ var default_level: LevelConfig
 func _ready() -> void:
 	start_button.button_pressed.connect(_on_start_button_pressed)
 	level_button.button_pressed.connect(_on_level_button_pressed)
+	encyclopedia_button.button_pressed.connect(_on_encyclopedia_button_pressed)
 	if PlayerData.progression.default_next_level.get("season_id"):
 		for _season_config in season_collection.seasons:
 			if _season_config.season_id == PlayerData.progression.default_next_level.get("season_id"):
@@ -73,3 +75,6 @@ func _load_first_level() -> void:
 
 func _on_level_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/UI/level_select_menu.tscn")
+
+func _on_encyclopedia_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/UI/encyclopedia_menu.tscn")

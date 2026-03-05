@@ -88,6 +88,8 @@ func start_next_level():
 # 内部逻辑，每次合成时安排参数变化，并相应相应检测
 func _once_merge(new_data: ThrowableData, score_add: int):
 	score += score_add
+	if PlayerData.progression.discover_throwable(new_data.type_id):
+		SaveManager.save_def()
 	GameEvent.signal_score_changed.emit(score)
 	_primary_obj = current_config.primary_objectives._check_each_merge(new_data, score, _primary_obj)
 	var sec_i = 0
