@@ -23,6 +23,8 @@ func spawn(click_x: float):
 	throwable.global_position = Vector2(click_x, spawn_y_offset)
 	throwable.rotation = 0
 	spawn_container.add_child(throwable)
+	if PlayerData.progression.discover_throwable(next_throwable.type_id):
+		SaveManager.save_def()
 	
 	throwable.call_deferred("play_spawn_animation")
 	

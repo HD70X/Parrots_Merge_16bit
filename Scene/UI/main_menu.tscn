@@ -70,6 +70,12 @@ layout_mode = 2
 size_flags_horizontal = 1
 _button_text = "LEVEL"
 
+
+[node name="EncyclopediaButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=198765432 instance=ExtResource("4_m8m1u")]
+layout_mode = 2
+size_flags_horizontal = 1
+_button_text = "ENCYCLOPEDIA"
+
 [node name="SettingButton" parent="CanvasLayer/Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1163547219 instance=ExtResource("4_m8m1u")]
 layout_mode = 2
 size_flags_horizontal = 1

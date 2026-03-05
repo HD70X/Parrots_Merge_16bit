@@ -5,6 +5,7 @@ class_name ProgressionManager
 var unlocked_season: Array = []
 var unlocked_level: Dictionary = {}
 var default_next_level: Dictionary = {}
+var discovered_throwables: Dictionary = {}
 
 func add_level_record(level_id: String, season_id: String, completed: bool, secondary_1: bool, secondary_2:bool, stars: int):
 	if unlocked_level.has(level_id):
@@ -33,12 +34,18 @@ func get_season_status(season_id: String) -> int:
 	return own_stars
 
 func to_dict() -> Dictionary:
-	return {"unlocked_season" : unlocked_season, "unlocked_level" : unlocked_level, "default_next_level" : default_next_level}
+	return {
+		"unlocked_season" : unlocked_season,
+		"unlocked_level" : unlocked_level,
+		"default_next_level" : default_next_level,
+		"discovered_throwables" : discovered_throwables
+	}
 
 func from_dict(_data: Dictionary):
 	unlocked_season = _data.get("unlocked_season", ["S1"])
 	unlocked_level = _data.get("unlocked_level", {})
 	default_next_level = _data.get("default_next_level", {})
+	discovered_throwables = _data.get("discovered_throwables", {})
 
 func unlock_season(_season_id: String):
 	if _season_id in unlocked_season:
@@ -51,3 +58,14 @@ func record_default_level(_season_id: String, _level_id: String):
 		"season_id" : _season_id,
 		"level_id" : _level_id
 	}
+
+func discover_throwable(type_id: String) -> bool:
+	if type_id == "":
+		return false
+	if discovered_throwables.has(type_id):
+		return false
+	discovered_throwables[type_id] = true
+	return true
+
+func is_throwable_discovered(type_id: String) -> bool:
+	return discovered_throwables.has(type_id)
