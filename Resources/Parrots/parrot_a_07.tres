@@ -9,4 +9,5 @@ script = ExtResource("3_k1iut")
 type_id = "a_07"
 scene = ExtResource("2_r0rai")
 preview_tex = ExtResource("1_wcbun")
+width = 225.0791
 metadata/_custom_type_script = "uid://btarij3lja7ue"

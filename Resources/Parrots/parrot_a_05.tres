@@ -13,4 +13,5 @@ scene = ExtResource("3_rslok")
 preview_tex = ExtResource("2_uapyk")
 next_form = ExtResource("1_3sa21")
 score_value = 20
+width = 167.0
 metadata/_custom_type_script = "uid://btarij3lja7ue"
